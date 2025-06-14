@@ -1,11 +1,12 @@
-const url = 'https://meteostat.p.rapidapi.com/point/monthly?lat=52.5244&lon=13.4105&alt=43&start=2020-01-01&end=2020-12-31';
+const url = 'https://visual-crossing-weather.p.rapidapi.com/forecast?contentType=csv&unitGroup=us&aggregateHours=24&location=Washington%2CDC%2CUSA&shortColumnNames=false';
 const options = {
 	method: 'GET',
 	headers: {
 		'x-rapidapi-key': '74393a9dc6mshe60df839b6d708ap1940c5jsn2ff7d7389924',
-		'x-rapidapi-host': 'meteostat.p.rapidapi.com'
+		'x-rapidapi-host': 'visual-crossing-weather.p.rapidapi.com'
 	}
 };
+
 async function call() {
 try {
 	const response = await fetch(url, options);
@@ -14,4 +15,4 @@ try {
 } catch (error) {
 	console.error(error);
 }
-}
+};
